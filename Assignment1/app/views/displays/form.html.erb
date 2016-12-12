@@ -1,0 +1,20 @@
+<%= form_tag(action: "form", method: "get") do %>
+  <%= label_tag(:input_group_by, "Group by:") %>
+  <%= text_field_tag(:input_group_by) %>
+  <%= label_tag(:input_sort_by, "SORT BY: maths/physics/chemistry") %>
+  <%= text_field_tag(:input_sort_by ) %>
+  <%= label_tag(:input_display_arr, "Display fields: maths,physics,chemistry") %>
+  <%= text_field_tag(:input_display_arr) %>
+  <%= label_tag(:year_1, "Year 1: ") %>
+  <%= text_field_tag(:year_1) %>
+  <%= label_tag(:year_2, "Year 2: ") %>
+  <%= text_field_tag(:year_2) %>
+  <%= label_tag(:should_compare, "Should compare? true/false") %>
+  <%= text_field_tag(:should_compare) %>
+  <%= label_tag(:should_total, "Should total? true/false") %>
+  <%= text_field_tag(:should_total) %>
+<br>
+
+  <%= submit_tag("Filter") %>
+<%= link_to 'List of all colleges', '/colleges'%> | <%= link_to 'List of students', '/students' %>
+<% end %>

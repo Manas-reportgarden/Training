@@ -1,0 +1,9 @@
+I"ù(function() {
+  jQuery(function() {
+    return $('#college_search').autocomplete({
+      source: ['fo', 'foo', 'food', 'four']
+    });
+  });
+
+}).call(this);
+:ET

@@ -1,0 +1,69 @@
+<h1>Students</h1>
+
+<table>
+  <thead>
+    <% @dis_arr.each do |x|%>
+    <th><%= x.capitalize %></th>
+    <% end %>
+  </thead>
+
+  <tbody>
+    <% @stud.each do |key,value| %>
+    <tr>
+    <% value.each do |k,v|%>
+        <% @dis_arr.each do |x|%>
+          <td><%= k[x] %></td>
+        <% end %>
+
+    </tr>
+
+    <% end %>
+      <% if params[:should_compare] == 'true'  && params[:input_group_by] == 'student_id'
+        compare_year1 = nil
+        compare_year2 = nil
+        for i in 0...value.length
+          compare_year1 = value[i] if value[i]['year']  == params[:year_1].to_i && !value[i].nil?
+          compare_year2 = value[i] if value[i]['year'] == params[:year_2].to_i && !value[i].nil?
+        end
+      %>
+        <tr>
+        <td>Change</td>
+        <%
+          @dis_arr.each do |x|
+              compare_marks = 0
+              compare_marks = (compare_marks-compare_year1[x]).abs if !compare_year1.nil?
+              compare_marks = (compare_marks-compare_year2[x]).abs if !compare_year2.nil?              
+        %>
+        <% if Student::COMPARE_KEYS_MARKS.include? x%>
+          <td><%= compare_marks %></td>
+        <% end %>
+        <% end %>
+        </tr>
+      <% end %>   
+
+      <%
+        if params[:should_total] == 'true' %>
+        <tr>
+        <td>Total</td>
+        <% @dis_arr.each do |y|
+          marks_total = 0
+          if Student::COMPARE_KEYS_MARKS.include? y
+            value.collect do |x|
+              marks_total = marks_total + x[y]
+            end %>
+        <td><%= marks_total %></td>
+          <% end
+          
+        end %>
+        </tr>
+       
+      <%end 
+
+      %>
+
+
+
+    <% end%>
+  </tbody>
+  	
+</table>
