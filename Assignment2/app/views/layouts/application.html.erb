@@ -9,6 +9,9 @@
   </head>
 
   <body>
+  	<h1><%= link_to 'Home', new_order_path %></h1>
     <%= yield %>
+    <%= link_to 'New order', new_order_path %>
+    <%= link_to 'List of orders', orders_path %>
   </body>
 </html>

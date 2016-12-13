@@ -1,18 +1,18 @@
 <%= form_tag(action: "form", method: "get") do %>
-  <%= label_tag(:input_group_by, "Group by:") %>
-  <%= text_field_tag(:input_group_by) %>
+  <%= label_tag(:input_group_by, "Group by: student_id/department/year") %>
+  <%= text_field_tag :input_group_by, nil, :required => true %>
   <%= label_tag(:input_sort_by, "SORT BY: maths/physics/chemistry") %>
-  <%= text_field_tag(:input_sort_by ) %>
+  <%= text_field_tag(:input_sort_by, nil, :required => true ) %>
   <%= label_tag(:input_display_arr, "Display fields: maths,physics,chemistry") %>
-  <%= text_field_tag(:input_display_arr) %>
+  <%= text_field_tag(:input_display_arr, nil, :required => true) %>
   <%= label_tag(:year_1, "Year 1: ") %>
   <%= text_field_tag(:year_1) %>
   <%= label_tag(:year_2, "Year 2: ") %>
   <%= text_field_tag(:year_2) %>
   <%= label_tag(:should_compare, "Should compare? true/false") %>
-  <%= text_field_tag(:should_compare) %>
+  <%= text_field_tag(:should_compare, nil, :required => true) %>
   <%= label_tag(:should_total, "Should total? true/false") %>
-  <%= text_field_tag(:should_total) %>
+  <%= text_field_tag(:should_total, nil, :required => true) %>
 <br>
 
   <%= submit_tag("Filter") %>

@@ -11488,3 +11488,339 @@ Processing by StudentsController#filter as HTML
 Completed 200 OK in 53ms (Views: 34.4ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:58:56 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 407ms (Views: 398.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-12 19:59:02 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2/2aH3n5HIO18U/1IjHkbqv4e5+v5johMSHACaqf0ekIw4jFF8YrJlFs1MWRyPimq7tK+/8sdp5829F1wrTdXg==", "input_group_by"=>"asda", "input_sort_by"=>"", "input_display_arr"=>"", "year_1"=>"", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 84ms (Views: 62.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:59:03 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 82ms (Views: 79.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:59:25 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 36ms (Views: 33.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-12 19:59:29 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTWNwbqhe5wmv+kYG2kTFiXFg4keAhy8b5L2lDF9ihb2C58b1J5MOcIiciiokA/eJYay7U7IUAMiaOfoWVaGoQ==", "input_group_by"=>"", "input_sort_by"=>"", "input_display_arr"=>"", "year_1"=>"", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 45ms (Views: 25.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-12 19:59:31 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-12 20:00:55 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-12 20:02:16 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 132ms (Views: 130.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-12 20:02:20 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Xr0kxnc5Phk7QLuWpDLI4DdJ4jZhGIU1xqlXqSESsTONgzYcGQYJvN/dIKYXy9QoNwrTUjHSyYqLU0bVSTm9hA==", "input_group_by"=>"student_id", "input_sort_by"=>"", "input_display_arr"=>"", "year_1"=>"", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 53ms (Views: 29.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-12 20:02:22 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 51ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/display" for 127.0.0.1 at 2016-12-13 11:23:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (38.2ms)
+Completed 200 OK in 924ms (Views: 866.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-13 11:23:47 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pWluqHAsUbc64Lwmtw8sH+ze0zOj2w2p4nTsjD7ozsYeHgzE13rPH5DyaDKJyr2W8VR05HooGO3rHGArMQhsyA==", "input_group_by"=>"", "input_sort_by"=>"", "input_display_arr"=>"", "year_1"=>"", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 137ms (Views: 53.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:23:49 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:25:02 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-13 11:25:04 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nhDLFnuJ0hr6YRnC/FgKAvKQOL3vPPb8ZMJqvHBgN68lZ6l63N9MslBzzdbCnZuL7xqfajbP47htquYbf4CVoQ==", "input_group_by"=>"", "input_sort_by"=>"", "input_display_arr"=>"", "year_1"=>"", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 46ms (Views: 41.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:25:06 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:25:19 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/newuser/Documents/Training/Assignment1/app/views/displays/form.html.erb:2: syntax error, unexpected ',', expecting ')'
+...(:input_group_by, "Group by:"), :required => true );@output_...
+...                               ^):
+  
+app/views/displays/form.html.erb:2: syntax error, unexpected ',', expecting ')'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.1ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.8ms)
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:25:29 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:25:46 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-13 11:25:51 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W10s+zHxlGgYBqoVYv9OQkHQxVZrFOQXrJLpsj9Gp+TgKk6XlqcKwLIUfgFcOt/LXFpigbLn8VOl+mUVMKYF6g==", "input_group_by"=>"", "input_sort_by"=>"sdxfcsd", "input_display_arr"=>"sdfsd", "year_1"=>"sdfsd", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 37.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:25:53 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-13 11:26:33 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Sr8HB5QdHNBtXkntVHU3aY31hoVXwW6oWw/3iWOzPnmzZq5HNRz9mIc8kxSDENjrbvYXUFZVTYHOcKV7HPaDQ==", "input_group_by"=>"", "input_sort_by"=>"", "input_display_arr"=>"", "year_1"=>"", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 29.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:26:34 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:27:45 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:27:58 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (159.1ms)
+Completed 500 Internal Server Error in 161ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `required' for #<#<Class:0x000000051fac20>:0x007f2c88271a30>
+Did you mean?  require):
+    1: <%= form_tag(action: "form", method: "get") do %>
+    2:   <%= label_tag(:input_group_by, "Group by:") %>
+    3:   <%= text_field_tag(:input_group_by, required => true) %>
+    4:   <%= label_tag(:input_sort_by, "SORT BY: maths/physics/chemistry") %>
+    5:   <%= text_field_tag(:input_sort_by ) %>
+    6:   <%= label_tag(:input_display_arr, "Display fields: maths,physics,chemistry") %>
+  
+app/views/displays/form.html.erb:3:in `block in _app_views_displays_form_html_erb___4577928895838695246_69914619777500'
+app/views/displays/form.html.erb:1:in `_app_views_displays_form_html_erb___4577928895838695246_69914619777500'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.5ms)
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:28:31 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/newuser/Documents/Training/Assignment1/app/views/displays/form.html.erb:3: syntax error, unexpected ',', expecting ')'
+...ext_field_tag(:input_group_by), :required => true );@output_...
+...                               ^):
+  
+app/views/displays/form.html.erb:3: syntax error, unexpected ',', expecting ')'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (17.6ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.6ms)
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:28:56 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/newuser/Documents/Training/Assignment1/app/views/displays/form.html.erb:3: syntax error, unexpected ',', expecting ')'
+...ext_field_tag(:input_group_by), required: true  );@output_bu...
+...                               ^):
+  
+app/views/displays/form.html.erb:3: syntax error, unexpected ',', expecting ')'
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.5ms)
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:31:01 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:32:07 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:32:09 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:32:16 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:33:25 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-13 11:34:00 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cy5IU0XwA3K/WamYnA71EZNa14gjcQePx4bf+7uCY6WwWSo/4qad2hVLfYyiy2SYjtBwX/qCEsvO7lNctGLBqw==", "input_group_by"=>"student_id", "input_sort_by"=>"asd", "input_display_arr"=>"asda", "year_1"=>"asd", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (1.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-13 11:34:39 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Cy5IU0XwA3K/WamYnA71EZNa14gjcQePx4bf+7uCY6WwWSo/4qad2hVLfYyiy2SYjtBwX/qCEsvO7lNctGLBqw==", "input_group_by"=>"student_id", "input_sort_by"=>"asd", "input_display_arr"=>"asda", "year_1"=>"asd", "year_2"=>"", "should_compare"=>"", "should_total"=>"", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-13 11:34:41 +0530
+Processing by DisplaysController#form as HTML
+  Rendering displays/form.html.erb within layouts/application
+  Rendered displays/form.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 39.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/display?method=get" for 127.0.0.1 at 2016-12-13 11:35:07 +0530
+Processing by StudentsController#filter as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5g5sg2w2VChSWk3hFs1YyvKXm2GYoiIwWzI6MNXTKGnp6QombrJTrXHzxorxkM90+RuVJsykcrz9Z8d7HC4+nQ==", "input_group_by"=>"student_id", "input_sort_by"=>"maths", "input_display_arr"=>"maths,physics,chemistry", "year_1"=>"", "year_2"=>"", "should_compare"=>"false", "should_total"=>"false", "commit"=>"Filter", "method"=>"get"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendering students/filter.html.erb within layouts/application
+  Rendered students/filter.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.5ms)
+
+
