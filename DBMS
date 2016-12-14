@@ -1,0 +1,57 @@
+CREATE TABLE accidents 
+(id INT, state text, "2006" INT, "2007" INT, "2008" INT, "2009" INT, "2010" INT, "2011" INT,
+"2012" INT, "2013" INT, "2014" INT);
+
+COPY accidents FROM '/path/accidents.csv' DELIMITER ',' CSV;
+
+with orders as (
+    select
+        state,
+        row_number() over (order by "2006" desc ) as y1,
+        row_number() over (order by "2007" desc ) as y2,
+        row_number() over (order by "2008" desc ) as y3,
+	row_number() over (order by "2009" desc ) as y4,
+	row_number() over (order by "2010" desc ) as y5,
+	row_number() over (order by "2011" desc ) as y6,
+	row_number() over (order by "2012" desc ) as y7,
+	row_number() over (order by "2013" desc ) as y8,
+	row_number() over (order by "2014" desc ) as y9
+     from accidents
+)
+select
+	y1.state as "2006",
+	y2.state as "2007",
+	y3.state as "2008",
+	y4.state as "2009",
+	y5.state as "2010",
+	y6.state as "2011",
+	y7.state as "2012",
+	y8.state as "2013",
+	y9.state as "2014"
+from orders as y1 
+	join orders as y2 on y1.y1=y2.y2 
+	join orders as y3 on y1.y1=y3.y3 
+	join orders as y4 on y1.y1=y4.y4
+	join orders as y5 on y1.y1=y5.y5
+	join orders as y6 on y1.y1=y6.y6
+	join orders as y7 on y1.y1=y7.y7
+	join orders as y8 on y1.y1=y8.y8
+	join orders as y9 on y1.y1=y9.y9      
+order by y1.y1 LIMIT 3;
+
+CREATE TABLE population 
+(id INT, state text, "1951" INT, "1961" INT, "1971" INT, "1981" INT, "1991" INT, "2001" INT,
+"2011" INT);
+
+COPY population FROM '/path/population.csv' DELIMITER ',' CSV;
+
+with table1 as(
+	select "state", "2011" from accidents
+),
+table2 as (
+	select "state", "2011" from population
+)
+select table1.state, table1."2011" as accidents, table2."2011" as population,
+(table1."2011"::decimal / table2."2011") as "Per capta most accident prone" from table1 JOIN table2 ON 
+table1."state" = table2."state" ORDER BY "Per capta most accident prone" DESC LIMIT 3;
+
