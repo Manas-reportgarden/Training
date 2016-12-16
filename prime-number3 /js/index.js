@@ -14,32 +14,24 @@ var isPrime = (function(){
   }
 })();
 
-var isPresent = (function(){
-  return function(inputNumber, primes){
-    for(var key in primes){
-      if(key == inputNumber)
-      return true;
-    }
-    return false;
-  };
-})();
-
 var checkNumber = (function () {
   var primes = {};
-  var counter = 0;
   return function (inputNumber) {
-    if(isPresent(inputNumber, primes)){
-      return inputNumber + " Is a prime"
+    if(primes[inputNumber]){
+      return inputNumber + " "+ primes[inputNumber];
     }
     if(isPrime(inputNumber)){
       primes[inputNumber] = " is a prime";
       return inputNumber + " is prime";
     }
+    primes[inputNumber] = " is not a prime";
     return inputNumber + " is not prime";;}
   })();
 
-  function myFunction(){
-    var inputNumber = $("#inputNumber").val();
-    if(inputNumber <= 0) return $('#result').html(inputNumber + "is not valid!");
-    $('#result').html(checkNumber(inputNumber));
-  }
+  $( document ).ready(function() {
+    $("#submit").click(function(){
+      var inputNumber = $("#inputNumber").val();
+      if(inputNumber <= 0) return $('#result').html(inputNumber + "is not valid!");
+      $('#result').html(checkNumber(inputNumber));
+    });
+  });
