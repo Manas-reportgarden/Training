@@ -8,5 +8,5 @@ window.StudentInfo =
     new StudentInfo.Routers.Colleges
     Backbone.history.start({pushState: true})
 
-$(document).ready ->
-  StudentInfo.initialize()
+  $(document).ready ->
+    StudentInfo.initialize()
