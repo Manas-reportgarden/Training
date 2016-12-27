@@ -3,10 +3,14 @@ var Filter = React.createClass({
   render: function() {
     return (<div>
       {
-                Object.keys(this.props.students).map(function(key){
-                  return <div key={ key }>{this.props.students[key].physics}</div>
-                }, this)
-              }
+        Object.values(this.props.students).map(function(key){
+          debugger
+          return   key.map(function(k){
+            debugger
+            return (k.department);
+          })
+        }, this)
+      }
     </div>);
   }
 });

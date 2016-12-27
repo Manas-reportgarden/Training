@@ -23,12 +23,17 @@ var Main = React.createClass({
 
     fetchData: function(){
       $.ajax({
-        url: '/students',
+        url: '/display',
         dataType: 'json',
-        type: 'GET',
+        type: 'POST',
+        data: {
+          input_group_by: this.state.input_group_by,
+          input_sort_by: this.state.input_sort_by,
+          input_display_arr: this.state.input_display_arr
+        },
         success: function(result) {
           this.setState({students: result});
-          console.log(this.state.students);
+          console.log(JSON.stringify(this.state.students));
 
         }.bind(this),
         error: function(xhr, status, err) {
@@ -47,7 +52,7 @@ var Main = React.createClass({
 
   render: function() {
     if (this.state.submitted) {
-            return <Filter students={this.state.students}/>;
+            return <Filter input_group_by={this.state.input_group_by} students={this.state.students}/>;
         }
         else {
       return (
