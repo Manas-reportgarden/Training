@@ -29,10 +29,10 @@
         <tr>
         <td>Change</td>
         <%
-          @dis_arr.each do |x|
+          @dis_arr.each do |subject_name|
               compare_marks = 0
-              compare_marks = (compare_marks-compare_year1[x]).abs if !compare_year1.nil?
-              compare_marks = (compare_marks-compare_year2[x]).abs if !compare_year2.nil?
+              compare_marks = (compare_marks-compare_year1[subject_name]).abs if !compare_year1.nil?
+              compare_marks = (compare_marks-compare_year2[subject_name]).abs if !compare_year2.nil?
         %>
         <% if Student::COMPARE_KEYS_MARKS.include? x%>
           <td><%= compare_marks %></td>
