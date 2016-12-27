@@ -2,17 +2,17 @@
 
 <table>
   <thead>
-    <% @dis_arr.each do |x|%>
-    <th><%= x.capitalize %></th>
+    <% @dis_arr.each do |header|%>
+    <th><%= header.capitalize %></th>
     <% end %>
   </thead>
 
   <tbody>
-    <% @stud.each do |key,value| %>
+    <% @stud.keys.each do |value| %>
     <tr>
-    <% value.each do |k,v|%>
-        <% @dis_arr.each do |x|%>
-          <td><%= k[x] %></td>
+    <% @stud[value].each do |display|%>
+        <% @dis_arr.each do |subject|%>
+          <td><%= display[subject] %></td>
         <% end %>
 
     </tr>
@@ -21,9 +21,9 @@
       <% if params[:should_compare] == 'true'  && params[:input_group_by] == 'student_id'
         compare_year1 = nil
         compare_year2 = nil
-        for i in 0...value.length
-          compare_year1 = value[i] if value[i]['year']  == params[:year_1].to_i && !value[i].nil?
-          compare_year2 = value[i] if value[i]['year'] == params[:year_2].to_i && !value[i].nil?
+        @stud[value].each do |student|
+          compare_year1 = student if student['year']  == params[:year_1].to_i && !student.nil?
+          compare_year2 = student if student['year'] == params[:year_2].to_i && !student.nil?
         end
       %>
         <tr>
@@ -32,32 +32,32 @@
           @dis_arr.each do |x|
               compare_marks = 0
               compare_marks = (compare_marks-compare_year1[x]).abs if !compare_year1.nil?
-              compare_marks = (compare_marks-compare_year2[x]).abs if !compare_year2.nil?              
+              compare_marks = (compare_marks-compare_year2[x]).abs if !compare_year2.nil?
         %>
         <% if Student::COMPARE_KEYS_MARKS.include? x%>
           <td><%= compare_marks %></td>
         <% end %>
         <% end %>
         </tr>
-      <% end %>   
+      <% end %>
 
       <%
         if params[:should_total] == 'true' %>
         <tr>
         <td>Total</td>
-        <% @dis_arr.each do |y|
+        <% @dis_arr.each do |subject_name|
           marks_total = 0
-          if Student::COMPARE_KEYS_MARKS.include? y
-            value.collect do |x|
-              marks_total = marks_total + x[y]
+          if Student::COMPARE_KEYS_MARKS.include? subject_name
+            @stud[value].collect do |subject|
+              marks_total = marks_total + subject[subject_name]
             end %>
         <td><%= marks_total %></td>
           <% end
-          
+
         end %>
         </tr>
-       
-      <%end 
+
+      <%end
 
       %>
 
@@ -65,5 +65,5 @@
 
     <% end%>
   </tbody>
-  	
+
 </table>

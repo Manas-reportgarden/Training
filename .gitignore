@@ -8,15 +8,15 @@
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
-/db/*.sqlite3-journal
+Assignment1/db/*.sqlite3
+Assignment1/db/*.sqlite3-journal
 
 # Ignore all logfiles and tempfiles.
 /log/*
-tmp/
-/tmp/*
-!/log/.keep
-!/tmp/.keep
+Assignment1/tmp/*
+Assignment1/log/*
+!Assignment1/log/.keep
+!Assignment1/tmp/.keep
 
 # Ignore Byebug command history file.
 .byebug_history

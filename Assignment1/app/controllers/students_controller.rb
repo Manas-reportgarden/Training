@@ -63,25 +63,23 @@ class StudentsController < ApplicationController
 
   def filter
     students = Student.all
-    
+
     @dis_arr = params[:input_display_arr].split(",")
     @dis_arr.insert(0, 'student_id') if @dis_arr.first != 'student_id'
     @dis_arr.push(params[:input_group_by]) if !@dis_arr.include? params[:input_group_by]
-    @total_marks = []
-    @change_marks = [] 
-    @students = [] 
-    @stud = Student.compute(params,@total_marks,@change_marks, @students, @dis_arr)
+    @stud = Student.compute(params, @students)
+
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_student
-      @student = Student.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_student
+    @student = Student.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def student_params
-      params.require(:student).permit(:student_id, :department, :maths, :physics, :chemistry, :year, :college_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def student_params
+    params.require(:student).permit(:student_id, :department, :maths, :physics, :chemistry, :year, :college_id)
+  end
 
 end
