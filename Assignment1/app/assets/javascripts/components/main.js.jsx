@@ -16,7 +16,7 @@ var Main = React.createClass({
 
    handleSubmit: function(e) {
         e.preventDefault();
-        // this.fetchData();
+        this.fetchData();
         this.setState({'submitted': true });
     },
 
@@ -29,14 +29,14 @@ var Main = React.createClass({
         success: function(result) {
           this.setState({students: result});
           console.log(this.state.students);
+
         }.bind(this),
         error: function(xhr, status, err) {
           // this.setState({students: user});
           console.error(this.props.url, status, err.toString());
         }.bind(this)
       });
-
-      return <Filter students={this.state.students}>
+      <Filter  />
     },
 
     handleChange: function (name, e) {
@@ -46,7 +46,10 @@ var Main = React.createClass({
     },
 
   render: function() {
-
+    if (this.state.submitted) {
+            return <Filter students={this.state.students}/>;
+        }
+        else {
       return (
         <div>
           <form role="form" onSubmit={this.handleSubmit}  >
@@ -64,17 +67,10 @@ var Main = React.createClass({
             <label ref="should_total">Should total? true/false </label>
             <input ref="should_total" placeholder="" type="text" value={this.state.should_total}  onChange={this.handleChange.bind(this, 'should_total')}/>
             <br/>
-             <p><button  onClick={this.fetchData}>Filter</button></p>
-            <div>
-              {
-                Object.keys(this.state.students).map(function(key){
-                  return <div key={ key }>{this.state.students[key].physics}</div>
-                }, this)
-              }
-            </div>
+            <input type="submit" value="Submit" />
           </form>
         </div>
       );
-
+    }
   }
 });
