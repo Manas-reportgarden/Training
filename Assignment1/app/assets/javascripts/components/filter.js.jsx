@@ -1,16 +1,29 @@
 var Filter = React.createClass({
 
   render: function() {
-    return (<div>
+    return (<div><table>
+       <thead>
+        {Object.values(this.props.input_display_arr).map(function(header){
+          return <th>{header}</th>
+        },this)
+      }
+    </thead>
+    <tbody>
       {
-        Object.values(this.props.students).map(function(key){
+        Object.keys(this.props.students).map(function(value){
           debugger
-          return   key.map(function(k){
+          return this.props.students[value].map(function(display){
             debugger
-            return (k.department);
-          })
+            return (<tr>{Object.values(this.props.input_display_arr).map(function(subject){
+              debugger
+              return <td>{display[subject]}</td>
+            },this)}</tr>)
+          }, this)
         }, this)
       }
+    </tbody>
+
+    </table>
     </div>);
-  }
+}
 });

@@ -69,7 +69,7 @@ class StudentsController < ApplicationController
     @dis_arr.push(params[:input_group_by]) if !@dis_arr.include? params[:input_group_by]
     @stud = Student.compute(params,@total_marks,@change_marks, @students, @dis_arr)
     puts @stud.inspect
-    render json: @stud
+    render json: [ @stud, @dis_arr]
   end
 
   private
