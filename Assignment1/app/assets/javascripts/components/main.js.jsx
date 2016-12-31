@@ -53,6 +53,7 @@ var Main = React.createClass({
     render: function() {
       if (this.state.submitted) {
         return <Filter input_display_arr={this.state.input_display_arr}
+          input_group_by={this.state.input_group_by}
           students={this.state.students}
           year_1={this.state.year_1}
           year_2={this.state.year_2}
