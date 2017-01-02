@@ -1,5 +1,5 @@
 class CollegesController < ApplicationController
-  before_action :set_college, only: [:show, :edit, :update, :destroy]
+  before_action :get_college, only: [:show, :edit, :update, :destroy]
 
   # GET /colleges
   # GET /colleges.json
@@ -63,13 +63,13 @@ class CollegesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_college
-      @college = College.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def get_college
+    @college = College.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def college_params
-      params.require(:college).permit(:name, :established_year)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def college_params
+    params.require(:college).permit(:name, :established_year)
+  end
 end

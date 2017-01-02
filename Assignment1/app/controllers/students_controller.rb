@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :get_student, only: [:show, :edit, :update, :destroy]
   COMPARE_KEYS_MARKS = ['maths', 'physics', 'chemistry']
   # GET /students
   # GET /students.json
@@ -9,8 +9,7 @@ class StudentsController < ApplicationController
 
   # GET /students/1
   # GET /students/1.json
-  def show
-  end
+  def show; end
 
   # GET /students/new
   def new
@@ -18,8 +17,7 @@ class StudentsController < ApplicationController
   end
 
   # GET /students/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /students
   # POST /students.json
@@ -68,12 +66,11 @@ class StudentsController < ApplicationController
     @dis_arr.insert(0, 'student_id') if @dis_arr.first != 'student_id'
     @dis_arr.push(params[:input_group_by]) if !@dis_arr.include? params[:input_group_by]
     @stud = Student.compute(params, @students)
-
   end
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_student
+  def get_student
     @student = Student.find(params[:id])
   end
 

@@ -1,6 +1,3 @@
 class DisplaysController < ApplicationController
-	def form
-	end
-	def index
-	end
+	def form; end
 end

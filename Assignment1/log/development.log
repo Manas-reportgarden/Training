@@ -12055,3 +12055,40 @@ Processing by StudentsController#new as HTML
 Completed 200 OK in 46ms (Views: 44.5ms | ActiveRecord: 0.4ms)
 
 
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" IN (NULL, NULL)[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id" FROM "students"[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students"."id" FROM "students"[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT  "colleges".* FROM "colleges" ORDER BY "colleges"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges"."name", "colleges"."established_year" FROM "colleges"[0m
+  [1m[36mCollege Load (0.3ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE (name LIKE 'BV')[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE (name LIKE 'B')[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges"."name", "colleges"."established_year" FROM "colleges"[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE (name LIKE '%B%')[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges"."name", "colleges"."established_year" FROM "colleges" WHERE (name LIKE '%B%')[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" GROUP BY "students"."department"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students"[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "deparment"[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "deparment"[0m
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "deparment"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students"."id", "students"."student_id", "students"."department", "students"."maths", "students"."physics" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."student_id", "students"."department", "students"."maths", "students"."physics", "students"."chemistry" FROM "students"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students"."student_id", "students"."department", "students"."maths", "students"."physics", "students"."chemistry" FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(student_id, department, maths, physics, chemistry) AS count_student_id_department_maths_physics_chemistry, "students"."student_id" AS students_student_id FROM "students" GROUP BY "students"."student_id"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "students"[0m
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" ORDER BY "students"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]

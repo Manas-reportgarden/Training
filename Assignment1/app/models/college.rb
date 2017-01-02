@@ -3,9 +3,9 @@ class College < ApplicationRecord
 
 	def self.search(search)
 		if search
-			where(["name LIKE ?", "%#{search}%"])
+			where(["name LIKE ?", "%#{search}%"]).select(:name, :established_year)
 		else
-			all
+			select(:name, :established_year)
 		end
 	end
 end
