@@ -1,7 +1,6 @@
 var Filter = React.createClass({
 
     render: function() {
-
         var rows = this.rowGenerator();
         return (
             <div>
@@ -37,13 +36,12 @@ rowGenerator: function() {
                         }, this)}</tr>
                     )
                 }, this),
-                this.props.should_total == 'true'
-                ? (<TotalRow students={this.props.students[value]} input_display_arr={this.props.input_display_arr}/>)
+                this.props.should_total == 'true'?
+                (<TotalRow students={this.props.students[value]} input_display_arr={this.props.input_display_arr}/>)
                 : '',
-                this.props.should_compare == 'true' && this.props.input_group_by == 'student_id'
-                ? (<CompareRow students={this.props.students[value]} input_display_arr={this.props.input_display_arr} year_1={this.props.year_1} year_2={this.props.year_2}/>)
+                this.props.should_compare == 'true' && this.props.input_group_by == 'student_id'?
+                (<CompareRow students={this.props.students[value]} input_display_arr={this.props.input_display_arr} year_1={this.props.year_1} year_2={this.props.year_2}/>)
                 : ''
-
             ])
         }, this)
     }

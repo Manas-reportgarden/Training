@@ -1,6 +1,5 @@
 
     render: function() {
-
         var rows = this.rowGenerator();
         return (
             React.createElement("div", null, 
@@ -36,13 +35,12 @@ rowGenerator: function() {
                         }, this))
                     )
                 }, this),
-                this.props.should_total == 'true'
-                ? (React.createElement(TotalRow, {students: this.props.students[value], input_display_arr: this.props.input_display_arr}))
+                this.props.should_total == 'true'?
+                (React.createElement(TotalRow, {students: this.props.students[value], input_display_arr: this.props.input_display_arr}))
                 : '',
-                this.props.should_compare == 'true' && this.props.input_group_by == 'student_id'
-                ? (React.createElement(CompareRow, {students: this.props.students[value], input_display_arr: this.props.input_display_arr, year_1: this.props.year_1, year_2: this.props.year_2}))
+                this.props.should_compare == 'true' && this.props.input_group_by == 'student_id'?
+                (React.createElement(CompareRow, {students: this.props.students[value], input_display_arr: this.props.input_display_arr, year_1: this.props.year_1, year_2: this.props.year_2}))
                 : ''
-
             ])
         }, this)
     }
