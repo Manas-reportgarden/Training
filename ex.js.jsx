@@ -31,7 +31,7 @@ TL.LocationForm = React.createClass({
 	// Setter for input fields
 	handleChange: function (name, e) {
 		var change = {};
-		change[ name ] = e.target.value;
+		change[name] = e.target.value;
 		this.setState(change);
 	},
 
@@ -58,7 +58,7 @@ TL.LocationForm = React.createClass({
 					cities_arr.push(value.display_name);
 				});
 				this.setState({"cities_data": cities_arr});
-				this.setState({"city_name": cities_arr[ 0 ]});
+				this.setState({"city_name": cities_arr[0]});
 			}.bind(this),
 			error: function () {
 				alert("Failed to fetch data");
@@ -77,7 +77,7 @@ TL.LocationForm = React.createClass({
 	//Setter for callbacks
 	handleCallbackChange: function (ref, value) {
 		var set_obj = {};
-		set_obj[ ref ] = value;
+		set_obj[ref] = value;
 		this.setState(set_obj);
 	},
 
@@ -88,12 +88,12 @@ TL.LocationForm = React.createClass({
 
 		var states = {};
 		this.props.us_state_list.map(function (state) {
-			return states[ state.code ] = state.name;
+			return states[state.code] = state.name;
 		});
 		this.setState({"arr_state_names": state_names_arr});
 		this.setState({"obj_states": states});
-		this.setState({"state_name": state_names_arr[ 0 ]});
-		var criteria_id = this.findCriteriaID(state_names_arr[ 0 ]);
+		this.setState({"state_name": state_names_arr[0]});
+		var criteria_id = this.findCriteriaID(state_names_arr[0]);
 		this.getCities(criteria_id);
 		$("#location-form").validate({
 			submitHandler: function () {
@@ -163,30 +163,13 @@ TL.LocationForm = React.createClass({
 					<div className="col-md-6">
 						<div className="form-group form-group-default required">
 							<label>{I18n.t("locations.form_titles.country")}</label>
-							<TL.Select2Component
-								id="country_name"
-								refValue="country_name"
-								dataSet={this.state.countries}
-								val={this.state.countries[ 0 ]}
-								needFormatting={true}
-								styleWidth="100%"
-								callback={this.handleCallbackChange}
-							/>
+							<TL.Select2Component id="country_name" refValue="country_name" dataSet={this.state.countries} val={this.state.countries[0]} needFormatting={true} styleWidth="100%" callback={this.handleCallbackChange}/>
 						</div>
 					</div>
 					<div className="col-md-6">
 						<div className="form-group form-group-default required">
 							<label>{I18n.t("locations.form_titles.state")}</label>
-							<TL.Select2Component
-								id="location_state_name"
-								refValue="state_name"
-								dataSet={this.state.arr_state_names}
-								val={this.state.arr_state_names[ 0 ]}
-								needFormatting={true}
-								styleWidth="100%"
-								callback={this.handleStateChange}
-								optionsValueMap ={this.state.obj_states}
-							/>
+							<TL.Select2Component id="location_state_name" refValue="state_name" dataSet={this.state.arr_state_names} val={this.state.arr_state_names[0]} needFormatting={true} styleWidth="100%" callback={this.handleStateChange} optionsValueMap ={this.state.obj_states}/>
 						</div>
 					</div>
 				</div>
@@ -194,16 +177,7 @@ TL.LocationForm = React.createClass({
 					<div className="col-md-8">
 						<div className="form-group form-group-default required">
 							<label>{I18n.t("locations.form_titles.city")}</label>
-							<TL.Select2Component
-								id="location_city_name"
-								placeholder="Select city"
-								refValue="city_name"
-								needFormatting={true}
-								dataSet={this.state.cities_data}
-								val={this.state.cities_data[ 0 ]}
-								styleWidth="100%"
-								callback={this.handleCallbackChange}
-							/>
+							<TL.Select2Component id="location_city_name" placeholder="Select city" refValue="city_name" needFormatting={true} dataSet={this.state.cities_data} val={this.state.cities_data[0]} styleWidth="100%" callback={this.handleCallbackChange}/>
 						</div>
 					</div>
 					<div className="col-md-4">
