@@ -34,7 +34,7 @@
               compare_marks = (compare_marks-compare_year1[subject_name]).abs if !compare_year1.nil?
               compare_marks = (compare_marks-compare_year2[subject_name]).abs if !compare_year2.nil?
         %>
-        <% if Student::COMPARE_KEYS_MARKS.include? x%>
+        <% if Student::COMPARE_KEYS_MARKS.include? subject_name%>
           <td><%= compare_marks %></td>
         <% end %>
         <% end %>

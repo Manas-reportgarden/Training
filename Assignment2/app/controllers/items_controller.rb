@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @items = Item.includes(:orders).select(:id, :name, :price)
   end
 
   # GET /items/1

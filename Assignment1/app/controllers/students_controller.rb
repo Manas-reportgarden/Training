@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   # GET /students
   # GET /students.json
   def index
-    @students = Student.all
+    @students = Student.includes(:college).select(:id, :student_id, :department, :maths, :physics, :chemistry, :year, :college_id)
   end
 
   # GET /students/1

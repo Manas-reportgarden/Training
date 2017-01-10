@@ -16,7 +16,7 @@
     <%= f.label :customer_id %>
     <%= f.collection_select :customer_id, Customer.all, :id, :name, {:prompt => 'Select customer'} %>
 
-    <%= link_to 'Show orders' %>
+    <%= link_to 'Show orders', id: "show-orders" %>
 </div>
 
 <div class="field">
@@ -33,7 +33,7 @@
     $('select').on('change', function () {
         c_id = $("#order_customer_id").val();
     });
-    $('a').on('click', function () {
+    $('show-orders').on('click', function () {
         window.location.href = '/customer_orders/' + c_id;
     });
 </script>

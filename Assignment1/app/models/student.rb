@@ -13,7 +13,7 @@ class Student < ApplicationRecord
 	end
 
 	def self.compute(params, students)
-		students = Student.select(:student_id, :department, :maths, :physics, :chemistry)
+		students = Student.select(:id, :student_id, :department, :maths, :physics, :chemistry, :year, :college_id)
 
 		student_group_values = self.group_by_input_value(students, params[:input_group_by])
 		student_sort_values = self.sort_by_input_value(student_group_values, params[:input_sort_by])

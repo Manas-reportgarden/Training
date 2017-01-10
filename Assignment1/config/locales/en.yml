@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  students:
+    edit_student: "Editing Student"
+    new_student: "New Student"
+  colleges:
+    edit_college: "Editing College"
+    new_college: "New College"
